@@ -1,1 +1,3 @@
-New Module of javascript study
+## New Module of javascript study
+
+## Studing manipulation of DOM
