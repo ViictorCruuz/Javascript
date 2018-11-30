@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercício 2 </title>
+        <title>Exercício 3 </title>
     <meta charset="UTF-8">
     </head>
     <body>
-        <ul>
-            <li>Diego</li>
-            <li>Gabriel</li>
-            <li>Lucas</li>
-            
-        </ul>
+        <ul></ul>
 
+        <script>
+            var names = ['Diego', 'Gabriel', 'Lucas'];
+            var listElement = document.querySelector('ul');  
+
+            for (name of names) {
+                var liElement = document.createElement('li');
+                var textElement = document.createTextNode(name);
+
+                liElement.appendChild(textElement);
+                listElement.appendChild(liElement);
+            }          
+        </script>
     </body>
 </html>
