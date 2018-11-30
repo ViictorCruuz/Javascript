@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercício 1 Resolvido</title>
+        <title>Exercício 1 Resolvido !</title>
     <meta charset="UTF-8">
     </head>
     <body>
@@ -10,17 +10,17 @@
         <div id="quadrados"></div>
 
         <script>
-            var cliElement = document.getElementById('botao');
-            var quadradosElement = document.getElementById('quadrados');
+            var btnElement = document.getElementById('botao');
+            var squaresElement = document.getElementById('quadrados');
 
-            cliElement.onclick = function() {
-                var quadrado = document.createElement('div');
+            btnElement.onclick = function() {
+                var square = document.createElement('div');
 
-                quadrado.style.width = '100px';
-                quadrado.style.height = '100px';
-                quadrado.style.backgroundColor = '#F00'
+                square.style.width = '100px';
+                square.style.height = '100px';
+                square.style.backgroundColor = '#F00'
 
-                quadradosElement.appendChild(quadrado);
+                squaresElement.appendChild(square);
             };
         </script>
     </body>
@@ -40,30 +40,3 @@
 
 
 
-
-
- <!-- <html lang="en">
-
-<head>
-  <title>Exercício 01</title>
-</head>
-
-<body>
-  <button id="new">Novo quadrado</button>
-
-  <div id="squares"></div>
-
-  <script>
-    var btnElement = document.getElementById('new');
-    var squaresElement = document.getElementById('squares');
-    btnElement.onclick = function () {
-      var square = document.createElement('div');
-      square.style.width = '100px';
-      square.style.height = '100px';
-      square.style.backgroundColor = '#F00';
-      squaresElement.appendChild(square);
-    };
-  </script>
-</body>
-
-</html> -->
