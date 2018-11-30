@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Manipulando a DOM </title>
+    <meta charset="UTF-8">
+    </head>
+        <!-- Como referenciar um objeto -->
+        <div id="app">
+            <input id="nome" />
+        </div>
+    <body>
+
+        <script>
+            // Criar um elemento no javascript passando a tag como parâmetro da minha função 'createElement'.
+            var linkElement = document.createElement('a');
+
+            // Agora eu posso passsar o método 'setAttribute' e como parâmetro 'href' e direcionar para o novo caminho.
+            linkElement.setAttribute('href', 'trabalhandodom.html');
+            linkElement.setAttribute('title', 'Site do Victor');
+
+            // Utilizado para criar um texto que será mostrado na tela e que será a ponto para nosso link
+            var textElement = document.createTextNode('Acessar o outro site');
+            
+            // Posicionar o nosso texto dentro do elemento do link
+            linkElement.appendChild(textElement);
+
+            // Vamos começar referenciando nossa 'div#app'
+            var containerElement = document.querySelector('#app');
+            // jogar o meu link dentro do corpo HTML
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement);
+
+
+        </script>
+    </body>
+</html>
