@@ -1,10 +1,11 @@
-var xhr = new XMLHttpRequest(); // << Nos dá acesso à funcionalidade do AJAX para que possamos recuperar informações de aglum Servidor.
+// Promisses são códigos que não vão ifluenciar na linha do tempo do nosso código javascript
+// São funções que vão devolver o valor de resultado, seja sucesso ou erro só depois de um tempo
+// Não precisamos nos preocupar quando esse valor vai ser retornado porque nosso javascript continua executando normalmente
 
-xhr.open('GET', 'https://api.github.com/users/viictorcruuz') // 'GET' é o método usado para buscar uma informação... e passo a URL que quero buscar os dados
-xhr.send(null); // utilizado para envio de parâmentros (por enquanto vai ser nulo)
-
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-        console.log(JSON.parse(xhr.responseText));
-    }
-}
+axios.get('https://api.github.com/users/ViictorCruuz')
+    .then(function(response) {
+        console.log(response);
+    })
+    .catch(function(error) {
+        console.warn(error);
+    });
